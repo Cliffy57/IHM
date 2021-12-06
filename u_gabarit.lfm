@@ -1,0 +1,136 @@
+object f_gabarit: Tf_gabarit
+  Left = 710
+  Height = 800
+  Top = 203
+  Width = 1200
+  Caption = 'Club Lecture'
+  ClientHeight = 775
+  ClientWidth = 1200
+  Color = 15461355
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -16
+  Font.Name = 'Calibri'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Menu = mnu_main
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '1.6.0.4'
+  object pnl_ariane: TPanel
+    Left = 0
+    Height = 30
+    Top = 0
+    Width = 1200
+    Align = alTop
+    Caption = 'fil d''ariane'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object pnl_selection: TPanel
+    Left = 0
+    Height = 715
+    Top = 30
+    Width = 280
+    Align = alClient
+    Color = 15461355
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    OnClick = pnl_selectionClick
+  end
+  object pnl_info: TPanel
+    Left = 0
+    Height = 30
+    Top = 745
+    Width = 1200
+    Align = alBottom
+    Caption = 'message d''information'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+    OnClick = pnl_infoClick
+  end
+  object pnl_travail: TPanel
+    Left = 280
+    Height = 715
+    Top = 30
+    Width = 920
+    Align = alRight
+    ClientHeight = 715
+    ClientWidth = 920
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -30
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 3
+    OnClick = pnl_travailClick
+    object lbl_titre: TLabel
+      AnchorSideTop.Side = asrBottom
+      Left = 1
+      Height = 713
+      Top = 1
+      Width = 918
+      Align = alClient
+      Alignment = taCenter
+      AutoSize = False
+      BidiMode = bdRightToLeft
+      Caption = #13#10#13#10'Club Lecture '#13#10'application '#13#10'de gestion '#13#10'des adherents '#13#10'd''un club de lecture'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -60
+      Font.Name = 'Century Gothic'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentBidiMode = False
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object mnu_main: TMainMenu
+    left = 144
+    top = 64
+    object item_accueil: TMenuItem
+      Caption = 'Accueil'
+      OnClick = mnu_item_Click
+    end
+    object item_adherent: TMenuItem
+      Caption = 'Adherent'
+      object item_liste: TMenuItem
+        Caption = 'Liste'
+        OnClick = mnu_item_Click
+      end
+      object item_stat: TMenuItem
+        Caption = 'Statistiques'
+        OnClick = mnu_item_Click
+      end
+    end
+    object item_tarif: TMenuItem
+      Caption = 'Tarification'
+      OnClick = mnu_item_Click
+    end
+    object item_quitter: TMenuItem
+      Caption = 'Quitter'
+      OnClick = item_quitterClick
+    end
+  end
+end

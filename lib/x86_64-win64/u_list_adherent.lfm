@@ -1,0 +1,85 @@
+inherited f_list_adherent: Tf_list_adherent
+  Left = 308
+  Height = 720
+  Top = 176
+  Width = 920
+  Caption = 'f_list_adherent'
+  ClientHeight = 720
+  ClientWidth = 920
+  inherited pnl_titre: TPanel
+    Width = 920
+    Caption = 'Liste des adherents'
+  end
+  inherited pnl_btn: TPanel
+    Top = 686
+    Width = 920
+    ClientWidth = 920
+    inherited pnl_btn_ligne: TPanel
+      Width = 521
+      ClientWidth = 521
+      inherited btn_line_detail: TSpeedButton
+        Left = 359
+        OnClick = btn_line_detailClick
+      end
+      inherited btn_line_add: TSpeedButton
+        Left = 400
+        OnClick = btn_line_addClick
+      end
+      inherited btn_line_delete: TSpeedButton
+        Left = 479
+        OnClick = btn_line_deleteClick
+      end
+      inherited btn_line_edit: TSpeedButton
+        Left = 439
+        OnClick = btn_line_editClick
+      end
+    end
+  end
+  inherited pnl_affi: TPanel
+    Height = 652
+    Width = 920
+    ClientHeight = 652
+    ClientWidth = 920
+    inherited sg_liste: TStringGrid
+      Height = 652
+      Width = 920
+      ColCount = 5
+      Columns = <      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'n°'
+          Width = 50
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Identite'
+          Width = 220
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Mel'
+          Width = 220
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Categorie socioprofessionnelle'
+          Width = 320
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'Commune'
+          Width = 100
+        end>
+      ColWidths = (
+        50
+        220
+        220
+        320
+        100
+      )
+      Cells = (
+        0
+      )
+    end
+  end
+end

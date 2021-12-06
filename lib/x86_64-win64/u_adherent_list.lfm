@@ -1,0 +1,89 @@
+inherited f_adherent_list: Tf_adherent_list
+  Left = 276
+  Height = 275
+  Top = 228
+  Width = 400
+  Caption = 'f_adherent_list'
+  ClientHeight = 275
+  ClientWidth = 400
+  inherited pnl_titre: TPanel
+    Width = 400
+    ClientWidth = 400
+    object lbl_titre: TLabel[0]
+      Left = 0
+      Height = 34
+      Top = 0
+      Width = 32
+      Align = alLeft
+      Caption = 'Total'
+      ParentColor = False
+    end
+    object lbl_adhesion_total: TLabel[1]
+      Left = 32
+      Height = 34
+      Top = 0
+      Width = 70
+      Align = alLeft
+      AutoSize = False
+      Layout = tlCenter
+      ParentColor = False
+    end
+  end
+  inherited pnl_btn: TPanel
+    Top = 241
+    Width = 400
+    ClientWidth = 400
+    inherited pnl_btn_ligne: TPanel
+      Width = 1
+      ClientWidth = 1
+      inherited btn_line_detail: TSpeedButton
+        Left = -41
+      end
+      inherited btn_line_add: TSpeedButton
+        Left = -39
+        OnClick = btn_line_addClick
+      end
+      inherited btn_line_delete: TSpeedButton
+        Left = -41
+        OnClick = btn_line_deleteClick
+      end
+      inherited btn_line_edit: TSpeedButton
+        Left = -40
+      end
+    end
+  end
+  inherited pnl_affi: TPanel
+    Height = 207
+    Width = 400
+    ClientHeight = 207
+    ClientWidth = 400
+    inherited sg_liste: TStringGrid
+      Height = 207
+      Width = 400
+      ColCount = 3
+      Columns = <      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'code'
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'designation'
+          Width = 200
+        end      
+        item
+          PickList.Strings = (          )
+          Title.Caption = 'tarif'
+          Width = 50
+        end>
+      ColWidths = (
+        64
+        200
+        50
+      )
+      Cells = (
+        0
+      )
+    end
+  end
+end

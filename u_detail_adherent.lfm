@@ -1,0 +1,360 @@
+object f_detail_adherent: Tf_detail_adherent
+  Left = 858
+  Height = 720
+  Top = 213
+  Width = 920
+  Caption = 'Detail d''un adherent'
+  ClientHeight = 720
+  ClientWidth = 920
+  ParentFont = True
+  LCLVersion = '1.6.0.4'
+  object pnl_titre: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 920
+    Align = alTop
+    TabOrder = 0
+  end
+  object pnl_btn: TPanel
+    Left = 0
+    Height = 70
+    Top = 650
+    Width = 920
+    Align = alBottom
+    ClientHeight = 70
+    ClientWidth = 920
+    TabOrder = 1
+    object btn_retour: TButton
+      Left = 808
+      Height = 33
+      Top = 16
+      Width = 96
+      Caption = 'Retour liste'
+      OnClick = btn_retourClick
+      TabOrder = 0
+    end
+    object btn_valider: TButton
+      Left = 576
+      Height = 25
+      Top = 32
+      Width = 75
+      Caption = 'Valider'
+      OnClick = btn_validerClick
+      TabOrder = 1
+    end
+    object btn_annuler: TButton
+      Left = 696
+      Height = 25
+      Top = 32
+      Width = 75
+      Caption = 'Annuler'
+      OnClick = btn_annulerClick
+      TabOrder = 2
+    end
+  end
+  object pnl_detail: TPanel
+    Left = 0
+    Height = 600
+    Top = 50
+    Width = 920
+    Align = alClient
+    ClientHeight = 600
+    ClientWidth = 920
+    TabOrder = 2
+    object pnl_ident: TPanel
+      Left = 1
+      Height = 140
+      Top = 1
+      Width = 918
+      Align = alTop
+      ClientHeight = 140
+      ClientWidth = 918
+      TabOrder = 0
+      object lbl_ident: TLabel
+        Left = 8
+        Height = 20
+        Top = 8
+        Width = 140
+        AutoSize = False
+        Caption = 'Identification'
+        ParentColor = False
+      end
+      object lbl_num: TLabel
+        Left = 40
+        Height = 20
+        Top = 40
+        Width = 51
+        Caption = 'numéro'
+        ParentColor = False
+      end
+      object edt_num: TEdit
+        Left = 104
+        Height = 28
+        Top = 40
+        Width = 104
+        CharCase = ecUppercase
+        OnEnter = edt_Enter
+        OnExit = edt_numExit
+        TabOrder = 0
+      end
+      object cbo_civ: TComboBox
+        Left = 104
+        Height = 28
+        Top = 80
+        Width = 79
+        ItemHeight = 20
+        ItemIndex = 1
+        Items.Strings = (
+          'Mme'
+          'Mr'
+        )
+        OnChange = cbo_civChange
+        TabOrder = 1
+        Text = 'Mr'
+      end
+      object edt_nom: TEdit
+        Left = 216
+        Height = 28
+        Top = 80
+        Width = 192
+        CharCase = ecUppercase
+        OnEnter = edt_Enter
+        OnExit = edt_nomExit
+        TabOrder = 2
+      end
+      object edt_prenom: TEdit
+        Left = 424
+        Height = 28
+        Top = 80
+        Width = 200
+        OnEnter = edt_Enter
+        OnExit = edt_prenomExit
+        TabOrder = 3
+      end
+      object lbl_num_erreur: TLabel
+        Left = 224
+        Height = 20
+        Top = 40
+        Width = 97
+        Caption = 'lbl_num_erreur'
+        ParentColor = False
+      end
+      object lbl_nom_erreur: TLabel
+        Left = 224
+        Height = 20
+        Top = 112
+        Width = 98
+        Caption = 'lbl_nom_erreur'
+        ParentColor = False
+      end
+      object lbl_prenom_erreur: TLabel
+        Left = 432
+        Height = 20
+        Top = 112
+        Width = 120
+        Caption = 'lbl_prenom_erreur'
+        ParentColor = False
+      end
+    end
+    object pnl_coord: TPanel
+      Left = 1
+      Height = 180
+      Top = 241
+      Width = 918
+      Align = alTop
+      ClientHeight = 180
+      ClientWidth = 918
+      TabOrder = 1
+      object lbl_coord: TLabel
+        Left = 8
+        Height = 20
+        Top = 0
+        Width = 88
+        Caption = 'Coordonnées'
+        ParentColor = False
+      end
+      object lbl_adresse: TLabel
+        Left = 40
+        Height = 20
+        Top = 48
+        Width = 50
+        Caption = 'adresse'
+        ParentColor = False
+      end
+      object lbl_mel: TLabel
+        Left = 66
+        Height = 20
+        Top = 127
+        Width = 25
+        Caption = 'mel'
+        ParentColor = False
+        ParentFont = False
+      end
+      object edt_adresse: TEdit
+        Left = 104
+        Height = 28
+        Top = 48
+        Width = 520
+        OnEnter = edt_Enter
+        OnExit = edt_adresseExit
+        TabOrder = 0
+      end
+      object edt_codepost: TEdit
+        Left = 104
+        Height = 28
+        Top = 88
+        Width = 120
+        CharCase = ecUppercase
+        OnEnter = edt_Enter
+        OnExit = edt_codepostExit
+        TabOrder = 1
+      end
+      object edt_ville: TEdit
+        Left = 256
+        Height = 28
+        Top = 88
+        Width = 368
+        OnEnter = edt_Enter
+        TabOrder = 2
+      end
+      object edt_mel: TEdit
+        Left = 104
+        Height = 28
+        Top = 127
+        Width = 521
+        OnEnter = edt_Enter
+        OnExit = edt_melExit
+        TabOrder = 3
+      end
+      object lbl_mel_erreur: TLabel
+        Left = 104
+        Height = 20
+        Top = 160
+        Width = 93
+        Caption = 'lbl_mel_erreur'
+        ParentColor = False
+        Visible = False
+      end
+      object lbl_coord_erreur: TLabel
+        Left = 137
+        Height = 20
+        Top = 13
+        Width = 107
+        Caption = 'lbl_coord_erreur'
+        ParentColor = False
+        Visible = False
+      end
+    end
+    object pnl_catsocio: TPanel
+      Left = 1
+      Height = 100
+      Top = 141
+      Width = 918
+      Align = alTop
+      ClientHeight = 100
+      ClientWidth = 918
+      TabOrder = 2
+      object lbl_catsocio: TLabel
+        Left = 8
+        Height = 20
+        Top = 0
+        Width = 199
+        Caption = 'Catégorie Socioprofessionelle'
+        ParentColor = False
+      end
+      object lbl_numcatsocio: TLabel
+        Left = 40
+        Height = 20
+        Top = 48
+        Width = 51
+        Caption = 'numéro'
+        ParentColor = False
+      end
+      object edt_numcatsocio: TEdit
+        Left = 104
+        Height = 28
+        Top = 48
+        Width = 80
+        CharCase = ecUppercase
+        OnEnter = edt_Enter
+        OnExit = edt_numcatsocioExit
+        TabOrder = 0
+      end
+      object mmo_catsocio: TMemo
+        Left = 248
+        Height = 26
+        Top = 48
+        Width = 376
+        TabOrder = 1
+      end
+      object lbl_catsocio_erreur: TLabel
+        Left = 104
+        Height = 20
+        Top = 80
+        Width = 123
+        Caption = 'lbl_catsocio_erreur'
+        ParentColor = False
+      end
+    end
+    object pnl_adhesion: TPanel
+      Left = 1
+      Height = 180
+      Top = 419
+      Width = 918
+      Align = alBottom
+      ClientHeight = 180
+      ClientWidth = 918
+      TabOrder = 3
+      object pnl_adhesion_titre: TPanel
+        Left = 1
+        Height = 50
+        Top = 1
+        Width = 916
+        Align = alTop
+        ClientHeight = 50
+        ClientWidth = 916
+        TabOrder = 0
+        object lbl_adhesion: TLabel
+          Left = 1
+          Height = 48
+          Top = 1
+          Width = 70
+          Align = alLeft
+          AutoSize = False
+          Caption = 'Adhésion'
+          ParentColor = False
+        end
+        object lbl_adhesion_erreur: TLabel
+          Left = 81
+          Height = 48
+          Top = 1
+          Width = 128
+          Align = alLeft
+          BorderSpacing.Left = 10
+          Caption = 'lbl_adhesion_erreur'
+          Layout = tlCenter
+          ParentColor = False
+          Visible = False
+        end
+      end
+      object pnl_adhesion_list: TPanel
+        Left = 1
+        Height = 128
+        Top = 51
+        Width = 410
+        Align = alLeft
+        TabOrder = 1
+      end
+      object pnl_adhesion_ajout: TPanel
+        Left = 411
+        Height = 128
+        Top = 51
+        Width = 506
+        Align = alClient
+        TabOrder = 2
+        OnClick = pnl_adhesion_ajoutClick
+      end
+    end
+  end
+end
